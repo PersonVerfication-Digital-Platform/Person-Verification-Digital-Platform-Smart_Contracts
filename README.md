@@ -1,6 +1,6 @@
 <p align="center">
 <img src="https://res.cloudinary.com/dunrf5nc7/image/upload/v1668758979/logo_yhjjeb.png" >
-<h1 align="center">Person Veerification Digital Platform - Smart Contracts</h1>
+<h1 align="center">Person Verification Digital Platform - Smart Contracts</h1>
 </p>
 
 ---
