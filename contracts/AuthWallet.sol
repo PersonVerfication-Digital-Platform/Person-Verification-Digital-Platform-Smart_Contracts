@@ -10,6 +10,7 @@ contract AuthWallet{
         string[] approvedBanks;
         string[] rejectedBanks;
         bool digitalIdCreated;
+        string currentVerifier;
 
     }
     
@@ -49,6 +50,7 @@ contract AuthWallet{
     function approveBank (string memory _bankId) external onlyOwner withDigitalId{
              
         wallet_list[msg.sender].approvedBanks.push(_bankId);
+        wallet_list[msg.sender].currentVerifier = _bankId;
         
     }
 
@@ -60,6 +62,17 @@ contract AuthWallet{
 
     function sendCreadentials() external view onlyOwner withDigitalId returns(string memory){
         return  wallet_list[msg.sender].personalDetails;    
+    }
+
+    
+    function proceedVerification(address wallet_owner,string memory _bankId, string memory _authHash) external returns(bool){
+        if(keccak256(abi.encodePacked(wallet_list[wallet_owner].currentVerifier)) == keccak256(abi.encodePacked(_bankId))){
+             wallet_list[msg.sender].currentVerifier = "";
+            return keccak256(abi.encodePacked(wallet_list[wallet_owner].personalDetails)) == keccak256(abi.encodePacked(_authHash));
+
+        }else{
+            return false;
+        }
     }
 
 
