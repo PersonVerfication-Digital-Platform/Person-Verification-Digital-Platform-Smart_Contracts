@@ -13,8 +13,9 @@
 
 ---
 
+<h2>Developer Guide</h2>
 <p>
-<h3>Prerequisites:</h3>
+<h3>1. Prerequisites:</h3>
 <ul>
 <li>NodeJS</li>
 <li>NPM</li>
@@ -23,19 +24,35 @@
 </ul>
 </p>
 
----
+
+<h1></h1>
+
 <p>
-<h3>Install Packages:</h3>
-<h6>Direct into the folder which includes package.json and execute the command "npm install"</h6>
+<h3>2. Install Packages:</h3>
+
+`$ npm install`
 
 </p>
 
----
+<h1></h1>
+
+
 <p>
-<h3>Truffle Commands:</h3>
-<h6>Complie contracts           :  Direct into the folder which includes truffle.config and execute the command "truffle complie"</h6>
-<h6>Test contracts              :  Direct into the folder which includes truffle.config and execute the command "truffle test"</h6>
+<h3>3. Truffle Commands:</h3>
+
++ Complie contracts         
+
+  `$ truffle complie`
+
++ Migrate Contracts to Ganache   
+
+  `$ truffle migrate`
+
++ Test contracts 
+
+  `$ truffle test`
 <img src="https://res.cloudinary.com/dunrf5nc7/image/upload/v1668760715/test_widybg.png">
-<h6>Migrate contracts to Ganache:  First add the truffle.config file to ganache local server and direct into the folder which includes truffle.config and execute the command "truffle migrate"</h6>
-
 </p>
+
+
+<h1></h1>
